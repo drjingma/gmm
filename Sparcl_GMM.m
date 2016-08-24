@@ -25,7 +25,7 @@
 % maxIter: maximum number of iterations, default is 50.
 % tol: tolerance level of stability of the final estimates, default is 1e-06.
 %%
-function [omega, mu, beta, RI, aRI, optRI, optaRI, group_member] = Sparcl_ULPD(z, ...
+function [omega, mu, beta, RI, aRI, optRI, optaRI, group_member] = Sparcl_GMM(z, ...
     zt, TRUE_INDEX, omega0, mu0, beta0, rho, lambda, maxIter, tol)
 
 if (nargin < 8), lambda = 0.1;  end

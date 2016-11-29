@@ -1,4 +1,4 @@
-%% Parameter estimation and clustering for a two-class normal mixture
+%% Parameter estimation and clustering for a two-class Gaussian mixture via the EM
 % It is based on the EM algorithm, and iteratively estimates the mixing
 % ratio omega, component means mu_1, mu_2 and beta=inv(Sigma)*(mu_1 - mu_2).
 
@@ -26,7 +26,7 @@
 % tol: tolerance level of stability of the final estimates, default is 1e-06.
 %
 
-function [omega, mu, beta, RI, aRI, optRI, optaRI, group_member] = Sparcl_GMM(z, zt, TRUE_INDEX, omega0, mu0, beta0, rho, lambda, maxIter, tol)
+function [omega, mu, beta, RI, aRI, optRI, optaRI, group_member] = CHIME(z, zt, TRUE_INDEX, omega0, mu0, beta0, rho, lambda, maxIter, tol)
 
 if (nargin < 8), lambda = 0.1;  end
 if (nargin < 9), maxIter = 50;  end
